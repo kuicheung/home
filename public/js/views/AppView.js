@@ -1,11 +1,9 @@
 define(['text!/public/templates/footer.html',
-        'text!/public/partials/googleSquareAd.html',
         'Router',
         'NavbarView',
         'PageView','Pages',
         'ChatboxView','Chatbox'],
         function(footerTemplate,
-        		googleSqrAd,
         		Router,
         		NavbarView,
         		PageView,Pages,
@@ -37,9 +35,7 @@ define(['text!/public/templates/footer.html',
       this.chatboxModel = new Chatbox();
       this.chatboxView = new ChatboxView({model:this.chatboxModel});
                    
-      this.sidebar.append(googleSqrAd);
       this.sidebar.append(this.chatboxView.render().$el);
-      this.sidebar.append(googleSqrAd);
 
       this.render();
 
