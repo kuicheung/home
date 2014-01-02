@@ -1,0 +1,9 @@
+<% if(page.dropdown === true){%>
+<li <% if(page.active===true){%>class="active dropdown"<%}%>>
+	<a class="dropdown-toggle" data-toggle="dropdown"><%=page.dropdownName%> <b class="caret"></b></a>
+	<ul id="projects-tab" class="dropdown-menu">
+	</ul>
+</li>
+<%}else{%>
+<li <% if(page.active===true){%>class="active"<%}%>><a id="resume-link"><%=page.tabName%></a></li>
+<%}%>

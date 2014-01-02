@@ -1,0 +1,39 @@
+<div data-role="header">
+	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+	        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	            <span class="sr-only">Toggle navigation</span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	            <span class="icon-bar"></span>
+	        </button>     
+	        <a class="navbar-brand" style="color:#ffffff" dest="<%=indexPageId%>">Kui Cheung's Home Page</a>	
+        </div>
+        <div class="navbar-collapse collapse">          
+			<ul id="page-tabs" class="nav navbar-nav">
+			<% for(var i=0;i<tabs.length;i++){
+				if(tabs[i].dropdown){%>
+				<li <%	var active = false;
+						for(var j=0;j<tabs[i].pages.length;j++){
+							if(tabs[i].pages[j].isActive){
+								active = true;
+								break; 
+							}
+						};
+						if(active){%>class="active"<%}%>>
+					<a class="dropdown-toggle" data-toggle="dropdown"><%=tabs[i].name%><b class="caret"></b></a>
+    				<ul id="projects-tab" class="dropdown-menu">
+    				<%_.each(tabs[i].pages,function(val){%>
+    				<li><a dest="<%=val.get('id')%>"><%=val.get('linkName')%></a></li>
+    				<%});%>
+    				</ul>
+    			</li>
+				<%}else{%>
+				<li <%if(tabs[i].page[0].isActive){%>class="active"<%}%>><a dest="<%=tabs[i].page[0].get('id')%>"><%=tabs[i].page[0].get('linkName')%></a></li>
+			<%}}%>
+			</ul>		
+        </div><!--/.navbar-collapse -->        
+    </div>
+</div>
+</div>
