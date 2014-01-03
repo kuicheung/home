@@ -1,4 +1,4 @@
-define(['text!/public/templates/page.html','views/GameView'],
+define(['text!/templates/page.html','views/GameView'],
         function(pageTemp,GameView){
 	var PageView = Backbone.View.extend({
     tagName: 'div',
@@ -12,18 +12,88 @@ define(['text!/public/templates/page.html','views/GameView'],
     },
     events: {
     },
+    initUnityPlayer: function(){
+    	console.log('init player');
+    	var that = this;
+    	var config = {
+				width: 800, 
+				height: 450,
+				params: { enableDebugging:"0" }
+				
+			};
+    		
+    			this.unityPlayer = new UnityObject2(config);
+
+				jQuery(function() {
+	
+					var $missingScreen = jQuery("#unityPlayer").find(".missing");
+					var $brokenScreen = jQuery("#unityPlayer").find(".broken");
+					$missingScreen.hide();
+					$brokenScreen.hide();
+					console.log('after hide');
+					that.unityPlayer.observeProgress(function (progress) {
+						switch(progress.pluginStatus) {
+							case "broken":
+								$brokenScreen.find("a").click(function (e) {
+									e.stopPropagation();
+									e.preventDefault();
+									that.unityPlayer.installPlugin();
+									return false;
+								});
+								$brokenScreen.show();
+							break;
+							case "missing":
+								$missingScreen.find("a").click(function (e) {
+									e.stopPropagation();
+									e.preventDefault();
+									that.unityPlayer.installPlugin();
+									return false;
+								});
+								$missingScreen.show();
+							break;
+							case "installed":
+								$missingScreen.remove();
+							break;
+							case "first":
+							break;
+						}
+					});
+					that.unityPlayer.initPlugin(jQuery("#unityPlayer")[0], "/web player.unity3d");
+				});
+    		
+    },
     renderPage: function(name){
-    	if(this.currentView)
-    		this.currentView.hide();
+    	if(this.currentView){
+    		if(this.currentName=='shooter'){
+    			$('#unity-view').css({position:'absolute',left:-1000,top:-1000});
+    		}
+    		else
+    			this.currentView.hide();    		
+    	}
+    	this.currentName = name;
     	
     	if(!this.views[name]){
     		this.views[name] = $('<div></div>').html(this.pageTemplate(this.pages.get(name).toJSON()));
+    		console.log('new view '+name);
     		this.$el.append(this.views[name]);
 	    	if(name==='home'){
 	    		this.$el.find('#home').append($('<div id="frame"></div>').html(this.game));
 	    	}
     	}
-    	this.currentView = this.views[name].show();
+    	this.currentView = this.views[name];
+    	if(name=='shooter'){
+    		console.log(this.unityPlayer == undefined);
+        	if(!this.unityPlayer){
+        		this.initUnityPlayer();
+        	}
+    		$('#unity-view').css({position:'relative',left:0,top:0});
+    	}
+    	
+    	this.currentView.show();
+    		
+    		
+    	
+    	
     }
   });
   return PageView;

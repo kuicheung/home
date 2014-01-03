@@ -1,7 +1,7 @@
 /**
  * Created by Kiwi on 12/26/13.
  */
-define(['text!/public/templates/game.html','models/Player','text!/public/img/game/park2.json','grid','ga','views/EntityView'],
+define(['text!/templates/game.html','models/Player','text!/img/game/park2.json','grid','ga','views/EntityView'],
     function(gameTemplate,Player,tilesJson,mapgrid,ga,EntityView){
         var GameView = Backbone.View.extend({
             tagName: 'div',
@@ -15,11 +15,13 @@ define(['text!/public/templates/game.html','models/Player','text!/public/img/gam
                 'click #aplayer' : 'playSound',
                 'click #but-start' : 'startGame',
                 'click #but-stop' : 'stopGame',
-                'click #but-reset' : 'resetGame'
-            },
+                'click #but-reset' : 'resetGame',
+                'mouseover #game' : 'mouseoverGame',
+                'mouseleave #game' : 'mouseleaveGame'
+            },                  
             
             /*
-             *  Generate new pellets for teh board
+             *  Generate new pellets for the board
              */
             generatePellets: function(cord){
                 var i,tile,row,col,pelletImg,pelletsPath=[];
@@ -41,7 +43,7 @@ define(['text!/public/templates/game.html','models/Player','text!/public/img/gam
                     y = Math.floor(pellets[i].row*this.mapgrid.gridsize);
                     x = Math.floor(pellets[i].col*this.mapgrid.gridsize);
 
-                    pelletImg = $('<img class="pellet" src="/public/img/game/bass.png"/>')
+                    pelletImg = $('<img class="pellet" src="/img/game/bass.png"/>')
                         .css({top:y,left:x});
                     this.game.append(pelletImg);
                     pelletsPath.push({i:i+2,row:pellets[i].row,col:pellets[i].col,pelletImg:pelletImg});
@@ -60,6 +62,20 @@ define(['text!/public/templates/game.html','models/Player','text!/public/img/gam
                 var row = Math.floor((e.clientY+$(document).scrollTop()-this.game.offset().top)/gridsize);
 
                 this.moveTo(col,row);
+            },
+            
+            /*
+             *  Show game buttons when mouse over game
+             */
+            mouseoverGame: function(){
+            	console.log('mouseover');
+            },
+            
+            /*
+             *  Show game buttons when mouse over game
+             */
+            mouseleaveGame: function(){
+            	console.log('mouseleave');
             },
             
             /*
@@ -116,7 +132,7 @@ define(['text!/public/templates/game.html','models/Player','text!/public/img/gam
 
                 this.game = this.$el.find('#game');
 
-                var player = Player.create({playerId:'aplayer',playerImgSrc:'/public/img/kitten.png',audioWav:'/public/sound/kitten.wav'});
+                var player = Player.create({playerId:'aplayer',playerImgSrc:'/img/kitten.png',audioWav:'/public/sound/kitten.wav'});
                 this.entity = new EntityView({ga:this.ga,mapgrid:this.mapgrid,model:player});
                 this.entity.render();
                 this.game.append(this.entity.$el);

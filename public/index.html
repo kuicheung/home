@@ -2,18 +2,19 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-  	<script src='http://static.kuicheung.com/public/js/lib/jquery_1_10.js'></script>
-	<script data-main="/public/js/main.js" src="http://static.kuicheung.com/public/js/lib/require.js"></script>
+  	<title>Kui Cheung's Home Page</title>
+  	<script src='js/lib/jquery_1_10.js'></script>
+  	<script type="text/javascript" src="http://webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/UnityObject2.js"></script>
+	<script data-main="js/main.js" src="js/lib/require.js"></script>
   	<meta http-equiv='X-Frame-Options' content='DENY'> 
   	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
-	<link rel='stylesheet' href='http://static.kuicheung.com/public/css/bootstrap.min.css'> 
-	<link rel='stylesheet' href='http://static.kuicheung.com/public/css/bootstrap-theme.min.css'> 	
-	<link rel='stylesheet' type='text/css' href='http://static.kuicheung.com/public/css/themes/smoothness/jquery-ui.css' /> 
-	<link rel='stylesheet' type='text/css' href='http://static.kuicheung.com/public/css/datatable.css' /> 
-	<link rel='stylesheet' type='text/css' href='/public/css/style.css' />
+	<link rel='stylesheet' href='css/bootstrap.min.css'> 
+	<link rel='stylesheet' href='css/bootstrap-theme.min.css'> 	
+	<link rel='stylesheet' type='text/css' href='css/themes/smoothness/jquery-ui.css' /> 
+	<link rel='stylesheet' type='text/css' href='css/datatable.css' /> 
+	<link rel='stylesheet' type='text/css' href='css/style.css' />
   </head>
   <body>  	
-  	
   		<div id="iqtest" class="">
 		  	<header>
 		  	</header>
@@ -21,9 +22,18 @@
 		  	<div id="main"> 	
 		  	</div>
 		  	<div id="sidebar">
-		  		
-		 	</div>
-		 	</div>
+		  		<div>															
+					<div id="fb-root"></div>
+					<script>(function(d, s, id) {
+					  var js, fjs = d.getElementsByTagName(s)[0];
+					  if (d.getElementById(id)) return;
+					  js = d.createElement(s); js.id = id;
+					  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=430279816999956";
+					  fjs.parentNode.insertBefore(js, fjs);
+					}(document, 'script', 'facebook-jssdk'));</script>
+					<div class="fb-like" data-href="http://www.kuicheung.com" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+				</div>
+			</div>
             <footer>
 			</footer>
 		</div>

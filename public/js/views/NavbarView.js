@@ -1,4 +1,4 @@
-define(['text!/public/templates/navbar.html'],
+define(['text!/templates/navbar.html'],
         function(navbarTemplate){
 	var ProjectLink = Backbone.View.extend({
     tagName: 'div',

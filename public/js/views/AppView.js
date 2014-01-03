@@ -1,4 +1,4 @@
-define(['text!/public/templates/footer.html',
+define(['text!/templates/footer.html',
         'Router',
         'NavbarView',
         'PageView','Pages',

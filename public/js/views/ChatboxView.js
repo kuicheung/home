@@ -1,4 +1,4 @@
-define(['text!/public/templates/chatbox.html','chatroom'],
+define(['text!/templates/chatbox.html','chatroom'],
         function(chatbox,chatroom){
 	var ChatboxView = Backbone.View.extend({
     tagName: 'div',
