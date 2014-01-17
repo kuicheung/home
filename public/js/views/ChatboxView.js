@@ -42,7 +42,7 @@ define(['text!/templates/chatbox.html','chatroom'],
     render: function() {
         var that = this;
     	this.$el.html(this.chatbox(this.model.toJSON()));
-    	 $('#answer').focus();
+    	// $('#answer').focus();
 
     	return this;
     },

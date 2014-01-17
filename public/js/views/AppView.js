@@ -21,6 +21,7 @@ define(['text!/templates/footer.html',
       this.footer = $('footer');
       this.main = $('#main');
       this.sidebar = $('#sidebar');
+     // $(window).scroll(this.scroll);
       
       Backbone.history.start();   
       this.pages = new Pages;
@@ -49,6 +50,10 @@ define(['text!/templates/footer.html',
     },
     render: function() {
         this.footer.html(this.footerTemplate());        
+    },
+    scroll: function(e){
+
+    	
     }
   });
   return AppView;
