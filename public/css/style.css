@@ -48,11 +48,14 @@ a {
 
 .frame{
 <<<<<<< HEAD
+<<<<<<< HEAD
 	border-image:url(../img/game/frame.png) 1 1 stretch;
 	-moz-border-image:url(../img/game/frame.png) 1 1 stretch;
 	-webkit-border-image:url(../img/game/frame.png) 1 1 stretch; /* Safari 5 and older */
 	-o-border-image:url(../img/game/frame.png) 1 1 stretch; /* Opera */
 =======
+=======
+>>>>>>> 9da89eb6f695adda3c258d70fbf104fb6c38ad31
 	border-image:url(/img/game/frame.png) 1 1 stretch;
 	-webkit-border-image:url(/img/game/frame.png) 1 1 stretch; /* Safari 5 and older */
 	-o-border-image:url(/img/game/frame.png) 1 1 stretch; /* Opera */
