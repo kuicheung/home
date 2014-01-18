@@ -83,15 +83,7 @@ define(['text!/templates/page.html','views/GameView','nivoSlider'],
 	    		this.$el.find('#slider').nivoSlider({pauseTime: 1000000});
 			}
 	    	else if(name==='siquoia'){
-<<<<<<< HEAD
-<<<<<<< HEAD
 	    		this.$el.find('#slider2').nivoSlider({pauseTime: 1000000});
-=======
-	    		this.$el.find('#slider').nivoSlider({pauseTime: 1000000});
->>>>>>> 9da89eb6f695adda3c258d70fbf104fb6c38ad31
-=======
-	    		this.$el.find('#slider').nivoSlider({pauseTime: 1000000});
->>>>>>> 9da89eb6f695adda3c258d70fbf104fb6c38ad31
 			}
     	}
     	this.currentView = this.views[name];

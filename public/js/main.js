@@ -1,5 +1,5 @@
 requirejs.config({
-	baseUrl: 'http://kuicheung-home-page.s3-website-us-east-1.amazonaws.com/js/',
+	//baseUrl: 'http://static.kuicheung.com/public/js/',
     paths: {
     	'jquery' : 'lib/jquery_1_10',
         'jquery_ui' : 'lib/jquery-ui',
@@ -19,15 +19,7 @@ requirejs.config({
         'Chatbox' : 'models/Chatbox',
         'PF' : 'lib/pathfinding-min',
         'lod' : 'lib/lodash',
-<<<<<<< HEAD
-<<<<<<< HEAD
-        'nivoSlider' : 'lib/jquery.nivo.slider'
-=======
         'nivoSlider':'lib/jquery.nivo.slider'
->>>>>>> 9da89eb6f695adda3c258d70fbf104fb6c38ad31
-=======
-        'nivoSlider':'lib/jquery.nivo.slider'
->>>>>>> 9da89eb6f695adda3c258d70fbf104fb6c38ad31
     }
 });
 
@@ -35,11 +27,11 @@ requirejs.config({
 requirejs(['jquery','io','jquery_ui', 
            'dataTables', 'chatroom','underscore',
            'Backbone', 'AppView','Bootstrap',
-           'PF','lod','nivoSlider'],
-function   (jquery,io,  jquery_ui,   
+           'PF','lod','jquery'],
+function   ($,       io,  jquery_ui,   
 			dataTables,   chatroom,  _,           
 			Backbone,   AppView,  Bootstrap,
-			PF,lod,nivoSlider) {
+			PF,lod) {
     new AppView;
     
     

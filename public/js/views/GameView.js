@@ -132,7 +132,7 @@ define(['text!/templates/game.html','models/Player','text!/img/game/park2.json',
 
                 this.game = this.$el.find('#game');
 
-                var player = Player.create({playerId:'aplayer',playerImgSrc:'/img/kitten.png',audioWav:'/sound/kitten.wav'});
+                var player = Player.create({playerId:'aplayer',playerImgSrc:'/img/kitten.png',audioWav:'/public/sound/kitten.wav'});
                 this.entity = new EntityView({ga:this.ga,mapgrid:this.mapgrid,model:player});
                 this.entity.render();
                 this.game.append(this.entity.$el);
