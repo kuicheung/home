@@ -1,7 +1,7 @@
 /**
  * Created by Kiwi on 12/28/13.
  */
-define(['text!/templates/entity.html'],
+define(['text!../../templates/entity.html'],
     function(entityTemp){
         var ga,mapgrid,box,player;
 

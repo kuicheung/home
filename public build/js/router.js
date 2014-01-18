@@ -1,0 +1,1 @@
+define([],function(){var e=Backbone.Router.extend({routes:{":id":"page"},initialize:function(e){this.pageView=e},page:function(e){this.pageView.renderPage(e)}});return e});

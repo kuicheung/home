@@ -1,0 +1,1 @@
+define(["lib/socketio"],function(e){var t={socket:e.connect("http://www.tinypandasoftware.com:4000")};return t});

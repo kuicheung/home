@@ -1,7 +1,7 @@
 /**
  * Created by Kiwi on 12/26/13.
  */
-define(['text!/templates/game.html','models/Player','text!/img/game/park2.json','grid','ga','views/EntityView'],
+define(['text!../../templates/game.html','models/Player','text!../../img/game/park2.json','grid','ga','views/EntityView'],
     function(gameTemplate,Player,tilesJson,mapgrid,ga,EntityView){
         var GameView = Backbone.View.extend({
             tagName: 'div',

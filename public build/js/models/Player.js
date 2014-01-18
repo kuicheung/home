@@ -1,0 +1,1 @@
+define([],function(){var e={};return e.Player=Backbone.Model.extend({defaults:function(){playerId=0,playerImgSrc=1e3,audioOgg="",audioMpeg=""}}),{create:function(t){return new e.Player(t)},model:e.player}});

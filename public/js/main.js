@@ -24,10 +24,10 @@ requirejs.config({
 });
 
 // Start the main app logic.
-requirejs(['jquery','io','jquery_ui', 
-           'dataTables', 'chatroom','underscore',
-           'Backbone', 'AppView','Bootstrap',
-           'PF','lod','jquery'],
+requirejs(['lib/jquery_1_10','lib/socketio','lib/jquery-ui', 
+           'lib/jquery.dataTables.min', 'chatroom','lib/underscore_min',
+           'lib/backbone_min', 'views/AppView','lib/bootstrap.min',
+           'lib/pathfinding-min','lib/lodash'],
 function   ($,       io,  jquery_ui,   
 			dataTables,   chatroom,  _,           
 			Backbone,   AppView,  Bootstrap,

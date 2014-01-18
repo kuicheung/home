@@ -1,0 +1,143 @@
+<div id="nnet-div" class='row' >
+	<h1>Using Neural Net to Score Punch Motions<br/> captured by Kinect</h1>
+	<div class='col-xs-9'>
+	<a href="http://siquoia.kuicheung.com/nnet"  target="_blank">
+	<img class="box img-rounded" src="/img/nnet/screenshot01.jpg" id="main-img" />
+	</a>
+	</div>
+	<div class='row'>
+		<img class="col-xs-4" src="/img/nnet/joints.png" alt="" />
+<pre class="col-xs-4">
+Data from Joint 1 for 1 frame
+-----------------------------	
+"1":{
+	"id":1,
+	"position":[
+	174.1534322500229,
+	177.0914793014526,
+	2724.578142166138
+	],
+	"positionconfidence":1,
+	"rotation":[
+	0.9999985098838806,
+	-0.001681568799540401,
+	0,
+	0.001659117406234145,
+	0.9866470694541931,
+	0.1628643423318863,
+	-0.0002738675975706428,
+	-0.1628641039133072,
+	0.9866483807563782
+	],
+	"rotationconfidence":1
+},
+</pre>
+<pre class='col-xs-3'>
+Joints captured by Kinect
+-------------------------
+ 1      Head
+ 2      Center Shoulder
+ 3      Spine
+ 4      Center Hip
+ 6      Left Shoulder
+ 7      Left Elbow
+ 8      Left Wrist
+ 9      Left Hand
+12    	Right Shoulder
+13    	Right Elbow
+14    	Right Wrist
+15    	Right Hand
+17    	LeftHip
+18    	Left Knee
+19    	Left Ankle
+20    	Left Foot
+21    	Right Hip
+22    	Right Knee
+23    	Right Ankle
+24    	Right Foot
+</pre>
+	</div>
+	<div class="col-xs-11 panel panel-info" style="padding:0 0">
+		<div class="panel-heading" >Process</div>
+		<div class="panel-body">
+		<p>
+			<ol>
+				<li>Capture Master profile from KuFu Master</li>
+				<li>Capture training and testing profiles from volunteer</li>
+				<li>Run training and testing data through DTW against Master Profile</li>
+				<li>Train Neural Net with training data</li>
+				<li>Test Neural Net with testing data</li>
+			</ol>
+		</p>
+		</div>
+	</div>
+	<div class='row'>
+		<div class="principle-list">		
+			<ul class="list-group">		
+				<li class="list-group-item active"><strong>HipInititation</strong></li>	
+				<li class="list-group-item">Hip Left</li>
+				<li class="list-group-item">Knee Left</li>
+				<li class="list-group-item">Ankle Left</li>	
+				<li class="list-group-item">Foot Left</li>	
+				<li class="list-group-item">Hip Right</li>	
+				<li class="list-group-item">Knee Right</li>	
+				<li class="list-group-item">Ankle Right</li>	
+				<li class="list-group-item">Foot Right</li>
+			</ul>	
+		</div>	
+		<div class="principle-list">		
+			<ul class="list-group">			
+				<li class="list-group-item active"><strong>Spiral Transfer</strong></li>				
+				<li class="list-group-item">Spine</li>	
+				<li class="list-group-item">Shoulder Center</li>	
+				<li class="list-group-item">Head</li>	
+				<li class="list-group-item">Shoulder Left</li>	
+				<li class="list-group-item">Shoulder Right</li>									
+			</ul>
+		</div>
+		<div class="principle-list">		
+			<ul class="list-group">		
+				<li class="list-group-item active"><strong>Opposition Recoil</strong></li>
+				<li class="list-group-item">Spine</li>	
+				<li class="list-group-item">Shoulder Center</li>	
+				<li class="list-group-item">Shoulder Right</li>	
+				<li class="list-group-item">Elbow Left</li>	
+				<li class="list-group-item">Wrist Left</li>	
+				<li class="list-group-item">Hand Left</li>	
+				<li class="list-group-item">Hip Left</li>	
+				<li class="list-group-item">Knee Left</li>	
+				<li class="list-group-item">Ankle Left</li>	
+				<li class="list-group-item">Foot Left</li>	
+				<li class="list-group-item">Hip Right</li>	
+				<li class="list-group-item">Knee Right</li>	
+				<li class="list-group-item">Ankle Right</li>	
+				<li class="list-group-item">Foot Right</li>
+			</ul>	
+		</div>
+		<div class="principle-list">		
+			<ul class="list-group">	
+				<li class="list-group-item active"><strong>Wrist Elbow <br/>Shoulder Alignment</strong></li>
+				<li class="list-group-item">Shoulder Right</li>	
+				<li class="list-group-item">Elbow Right</li>	
+				<li class="list-group-item">Wrist Right</li>	
+				<li class="list-group-item">Hand Right</li>
+			</ul>
+		</div>
+		<div class="principle-list">
+			<ul class="list-group">
+				<li class="list-group-item active"><strong>Wrist alignment <br/>with chest</strong></li>
+				<li class="list-group-item">Spine</li>	
+				<li class="list-group-item">Shoulder Center</li>	
+				<li class="list-group-item">Shoulder Right</li>	
+				<li class="list-group-item">Elbow Right</li>										
+			</ul>
+		</div>
+		<div class="principle-list">		
+			<ul class="list-group">
+				<li class="list-group-item active"><strong>Shoulders Down</strong></li>
+				<li class="list-group-item">Shoulder Left</li>	
+				<li class="list-group-item">Shoulder Right</li>
+			</ul>												
+		</div>
+	</div>
+</div>

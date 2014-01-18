@@ -1,0 +1,78 @@
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('../fonts/glyphicons-halflings-regular.eot');
+  src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+}
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  height:1000px;
+}
+a {
+  color: #00B7FF;
+}
+.icon{
+	width:64px;
+	height:64px;
+	margin:10px 0;
+}
+.active{
+	color:#FFFFFF;
+}
+.red {color: #AA0000;}
+.white{color: #FFFFFF;}
+.player{
+    height:32px;
+    width:32px;
+}
+.principle-list{
+	display: inline-block;	
+	vertical-align: top;
+}
+.content{
+	margin-top:100px;
+	margin-bottom:100px;
+	width:1235px;
+}
+.pellet{
+    width:32px;
+    position:absolute;
+}
+.frame{
+	border-image:url(/img/game/frame.png) 1 1 stretch;
+	-webkit-border-image:url(/img/game/frame.png) 1 1 stretch; 
+	-o-border-image:url(/img/game/frame.png) 1 1 stretch; 
+	width:870px;
+	padding:35px;
+	z-index:120;
+}
+#game{
+    z-index: 100;
+    width:800px;
+    height:480px;
+    background-image: url('/img/game/park.png');
+    border-radius: 8px;
+    position:relative;
+    top:0;
+    left:0;
+}
+#game img{
+}
+#main{
+	width:900px;
+	display:inline-block;
+	vertical-align:top;
+	position:relative;
+}
+#sidebar{
+	width: 300px;
+	display:inline-block;
+}
+#sidebar div{
+	margin-top: 10px;
+}
+.slider-wrapper { 
+}
+#unity-view{
+	position:absolute;
+	margin-top:50px;
+}

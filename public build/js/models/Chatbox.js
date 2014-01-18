@@ -1,0 +1,1 @@
+define([],function(){var e=Backbone.Model.extend({defaults:function(){userCt=0,userId=1e3,text=""}});return e});

@@ -1,0 +1,1 @@
+define([],function(){var e=Backbone.Model.extend({defaults:function(){title="title",body="body"}});return e});

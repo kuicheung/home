@@ -1,4 +1,4 @@
-define(['text!/templates/page.html','views/GameView','nivoSlider'],
+define(['text!../../templates/page.html','views/GameView','lib/jquery.nivo.slider'],
         function(pageTemp,GameView,nivoSlider){
 	var PageView = Backbone.View.extend({
     tagName: 'div',

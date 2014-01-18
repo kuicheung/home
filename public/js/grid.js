@@ -1,7 +1,7 @@
 /**
  * Created by Kiwi on 12/27/13.
  */
-define(['PF'],
+define(['lib/pathfinding-min'],
     function(PF,tilesJson){
 
     var mapgrid = function(rows,cols,gridsize,tilesJson){
