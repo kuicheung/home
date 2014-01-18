@@ -5,7 +5,7 @@ module.exports = function (app){
 	// all environments
 	console.log(__dirname);
 	app.set('port', process.env.PORT || 80);
-	app.set('views', path.join(__dirname, '../app/views'));
+	app.set('views', path.join(__dirname, '../public'));
 	app.set('view engine', 'ejs');
 	app.use(express.favicon(path.join(__dirname, '../public/img/favicon.ico')));
 	//app.use(express.logger('dev'));
@@ -15,5 +15,5 @@ module.exports = function (app){
 	app.use(express.cookieParser('your secret here'));
 	app.use(express.session());
 	app.use(app.router);
-	app.use('/public',express.static(path.join(__dirname, '../public')));
+	app.use('/',express.static(path.join(__dirname, '../public')));
 };

@@ -1,9 +1,26 @@
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('../fonts/glyphicons-halflings-regular.eot');
+  src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+}
+
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  height:1000px;
 }
 
 a {
   color: #00B7FF;
+}
+
+.icon{
+	width:64px;
+	height:64px;
+	margin:10px 0;
+}
+
+.active{
+	color:#FFFFFF;
 }
 
 .red {color: #AA0000;}
@@ -13,33 +30,36 @@ a {
     height:32px;
     width:32px;
 }
+
+.principle-list{
+	display: inline-block;	
+	vertical-align: top;
+}
+
 .content{
 	margin-top:100px;
 	margin-bottom:100px;
-	width:1200px;
+	width:1235px;
 }
 .pellet{
     width:32px;
     position:absolute;
 }
-#bart-div img{
-	width: 100%;
-	margin:10px 2px;
-}
-#bart-div img.thumb{
-	border:5px solid #AAAAAA;
-}
-#bart-div ul{
-	list-style-type:none;
-}
-#bart-div .box{
-	border:10px solid #AAAAAA;
-}
 
-#frame{
+.frame{
+<<<<<<< HEAD
+<<<<<<< HEAD
+	border-image:url(../img/game/frame.png) 1 1 stretch;
+	-moz-border-image:url(../img/game/frame.png) 1 1 stretch;
+	-webkit-border-image:url(../img/game/frame.png) 1 1 stretch; /* Safari 5 and older */
+	-o-border-image:url(../img/game/frame.png) 1 1 stretch; /* Opera */
+=======
+=======
+>>>>>>> 9da89eb6f695adda3c258d70fbf104fb6c38ad31
 	border-image:url(/img/game/frame.png) 1 1 stretch;
 	-webkit-border-image:url(/img/game/frame.png) 1 1 stretch; /* Safari 5 and older */
 	-o-border-image:url(/img/game/frame.png) 1 1 stretch; /* Opera */
+>>>>>>> 9da89eb6f695adda3c258d70fbf104fb6c38ad31
 	width:870px;
 	padding:35px;
 	z-index:120;
@@ -48,7 +68,7 @@ a {
     z-index: 100;
     width:800px;
     height:480px;
-    background-image: url('/img/game/park.png');
+    background-image: url('../img/game/park.png');
     border-radius: 8px;
     position:relative;
     top:0;
@@ -63,16 +83,22 @@ a {
 	width:900px;
 	display:inline-block;
 	vertical-align:top;
+	position:relative;
 }
 
 #sidebar{
-	width: 250px;
+	width: 300px;
 	display:inline-block;
 }
 
 #sidebar div{
 	margin-top: 10px;
 }
+
+
+.slider-wrapper { 
+}
+
 
 #unity-view{
 	position:absolute;
