@@ -77,8 +77,14 @@ define(['text!/templates/page.html','views/GameView'],
     		console.log('new view '+name);
     		this.$el.append(this.views[name]);
 	    	if(name==='home'){
-	    		this.$el.find('#home').append($('<div id="frame"></div>').html(this.game));
+	    		this.$el.find('#game-div').html($('<div class="frame"></div>').html(this.game));
 	    	}
+	    	else if(name==='bart-tracker'){
+	    		this.$el.find('#slider').nivoSlider({pauseTime: 1000000});
+			}
+	    	else if(name==='siquoia'){
+	    		this.$el.find('#slider2').nivoSlider({pauseTime: 1000000});
+			}
     	}
     	this.currentView = this.views[name];
     	if(name=='shooter'){
@@ -86,14 +92,11 @@ define(['text!/templates/page.html','views/GameView'],
         	if(!this.unityPlayer){
         		this.initUnityPlayer();
         	}
-    		$('#unity-view').css({position:'relative',left:0,top:0});
+    		$('#unity-view').css({position:'fixed',left:100,top:100});
+    		
     	}
     	
     	this.currentView.show();
-    		
-    		
-    	
-    	
     }
   });
   return PageView;
