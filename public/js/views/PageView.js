@@ -1,5 +1,5 @@
-define(['text!/templates/page.html','views/GameView'],
-        function(pageTemp,GameView){
+define(['text!/templates/page.html','views/GameView','nivoSlider'],
+        function(pageTemp,GameView,nivoSlider){
 	var PageView = Backbone.View.extend({
     tagName: 'div',
     pageTemplate: _.template(pageTemp),
@@ -83,7 +83,11 @@ define(['text!/templates/page.html','views/GameView'],
 	    		this.$el.find('#slider').nivoSlider({pauseTime: 1000000});
 			}
 	    	else if(name==='siquoia'){
+<<<<<<< HEAD
 	    		this.$el.find('#slider2').nivoSlider({pauseTime: 1000000});
+=======
+	    		this.$el.find('#slider').nivoSlider({pauseTime: 1000000});
+>>>>>>> 9da89eb6f695adda3c258d70fbf104fb6c38ad31
 			}
     	}
     	this.currentView = this.views[name];

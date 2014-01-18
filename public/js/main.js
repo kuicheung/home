@@ -19,7 +19,11 @@ requirejs.config({
         'Chatbox' : 'models/Chatbox',
         'PF' : 'lib/pathfinding-min',
         'lod' : 'lib/lodash',
+<<<<<<< HEAD
         'nivoSlider' : 'lib/jquery.nivo.slider'
+=======
+        'nivoSlider':'lib/jquery.nivo.slider'
+>>>>>>> 9da89eb6f695adda3c258d70fbf104fb6c38ad31
     }
 });
 
